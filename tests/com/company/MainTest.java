@@ -16,12 +16,12 @@ public class MainTest {
         Main main = new Main();
         main.printMenu();
         String expectedOutput = "*---------------------Menu---------------------*\n" +
-                "Enter the name of the item you would like to view\n" +
-                "Burgers\n" +
-                "Milkshakes\n" +
-                "Extras\n" +
-                "Desserts\n" +
-                "Meal Deals\n";
+                "Select an item\n" +
+                "#1 Burgers\n" +
+                "#2 Milkshakes\n" +
+                "#3 Extras\n" +
+                "#4 Desserts\n" +
+                "#5 Meal Deals\n";
         assertEquals(expectedOutput, outContent.toString());
     }
 }
