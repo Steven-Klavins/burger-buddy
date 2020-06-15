@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
     public static String[] MENU = new String[]{"#1 Burgers", "#2 Milkshakes", "#3 Extras", "#4 Desserts", "#5 Meal Deals", "#6 Exit"};
-
+    public static String[] BURGERS = new String[]{"#1 Cheese burger - £7.00", "#2 Beef burger","#3 Chicken burger - £7.00", "#4 Veggie burger"};
     public static void main(String[] args) {
         user();
         double total = 0.00;
@@ -28,6 +28,9 @@ public class Main {
         while (finished==false) {
 
             switch (choice) {
+                case 1:
+                   burgers();
+                    break;
                 case 6:
                     System.out.println("Goodbye!");
                     break;
@@ -36,5 +39,14 @@ public class Main {
             }
             finished = true;
         }
+    }
+
+    public static void burgers () {
+        System.out.println("*--------------------Burgers--------------------*");
+        System.out.println("Select a burger");
+        for (int i = 0; i < BURGERS.length; i++) {
+            System.out.print(BURGERS[i] + "\n");
+        };
+
     }
 }
