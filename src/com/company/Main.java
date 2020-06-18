@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import static java.lang.Math.round;
+
 public class Main {
     public static String[] MENU = new String[]{"#1 Burgers", "#2 Milkshakes", "#3 Extras", "#4 Desserts", "#5 Meal Deals", "#6 Exit"};
     public static String[] BURGERS = new String[]{"#1 Cheese burger - £7.00", "#2 Beef burger - £5.00","#3 Chicken burger - £7.00", "#4 Veggie burger - £5.00"};
@@ -41,7 +43,6 @@ public class Main {
                 default:
                     System.out.println("Please enter a valid selection");
             }
-
         }
     }
 
@@ -72,6 +73,7 @@ public class Main {
         for (int i = 0; i < items.size(); i++) {
             System.out.print(items.get(i) + "\n");
         };
-        System.out.println("Total: " + total);
+        String result = String.format("%.2f", total);
+        System.out.println("Total: " + result);
     }
 }
