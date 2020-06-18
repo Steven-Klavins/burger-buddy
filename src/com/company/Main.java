@@ -59,9 +59,12 @@ public class Main {
             total += 7.00;
             items.add(BURGERS[choice]);
         }
-        else {
+        else if (choice<=3) {
             total += 5.00;
             items.add(BURGERS[choice]);
+        }
+        else {
+            System.out.println("Invalid selection");
         }
         printOrder ();
         printMenu();
